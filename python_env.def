@@ -9,7 +9,9 @@ From: python:3.11-slim
         libpng-dev \
         && rm -rf /var/lib/apt/lists/*
 
-    pip install --no-cache-dir \
+    pip install --upgrade pip --root-user-action=ignore
+
+    pip install --no-cache-dir --root-user-action=ignore\
         numpy \
         matplotlib
 
