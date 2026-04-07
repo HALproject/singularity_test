@@ -29,14 +29,25 @@ qsub --version
 
 ```text
 handson_singularity_pbs/
-├── README2.md
-├── analyze.py
-├── make_sample_data.py
-├── run_local.sh
-├── run_pbs.sh
-├── run_array.sh
-├── sample_data/
-└── output/
+├01_main_handson/
+│   ├README.md
+│   ├analyze.py
+│   ├make_sample_data.py
+│   ├run_local.sh
+│   ├run_pbs.sh
+│   ├run_array.sh
+│   ├sample_data/
+│   ├output_pbs/
+│   └output/
+├02_supplement_def/
+│   ├README_def.md
+│   └python_env_handson_v1.def
+├03_supplement_operations/
+│   └README_operations.md
+├04_instructor_notes/
+│   └Linstructor_notes.md
+└containers/
+     └python_env.def
 ```
 
 ---
