@@ -1,0 +1,17 @@
+Bootstrap: docker
+From: python:3.11-slim
+
+%post
+    apt-get update && apt-get install -y \
+        gcc \
+        gfortran \
+        libfreetype6-dev \
+        libpng-dev \
+        && rm -rf /var/lib/apt/lists/*
+
+    pip install --no-cache-dir \
+        numpy \
+        matplotlib
+
+%runscript
+    exec python "$@"
