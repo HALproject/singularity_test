@@ -1,0 +1,26 @@
+Bootstrap: docker
+From: python:3.11-slim
+
+%labels
+    Author YourName
+    Version v1.0
+    Description "Python handson environment for PBS + Singularity"
+
+%environment
+    export PYTHONUNBUFFERED=1
+    export MPLBACKEND=Agg
+
+%post
+    apt-get update && apt-get install -y \
+        gcc \
+        gfortran \
+        libfreetype6-dev \
+        libpng-dev \
+        && rm -rf /var/lib/apt/lists/*
+
+    pip install --no-cache-dir \
+        numpy \
+        matplotlib
+
+%runscript
+    exec python "$@"
