@@ -11,6 +11,7 @@ From: python:3.11-slim
     export MPLBACKEND=Agg
 
 %post
+    export PIP_ROOT_USER_ACTION=ignore
     apt-get update && apt-get install -y \
         gcc \
         gfortran \
